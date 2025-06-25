@@ -164,7 +164,7 @@ def simulate_prover_verifier(X_int, Wq_int, Wk_int, i, j):
 
     # Final consistency check
     assert final_val == claim, "Final check mismatch"
-    print("✅ Verifier accepts: attention score verified")
+    print("Verifier accepts: attention score verified")
 # %%
 # ---------------------------
 # 5) Demo
