@@ -178,5 +178,5 @@ if __name__ == "__main__":
     X_int, Wq_int, Wk_int = X % P, Wq % P, Wk % P
     i, j = 1, 2
 
-    print("▶ Simulating prover-verifier sum-check:")
+    print("Simulating prover-verifier sum-check:")
     simulate_prover_verifier(X_int, Wq_int, Wk_int, i, j)
