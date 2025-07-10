@@ -164,7 +164,7 @@ public:
         std::cout << "  Verifier:   Calculated sum (from coeffs) h(0)+h(1) = " << current_sum << std::endl;
 
         if (!(current_sum == expected_value)) { throw std::runtime_error("Verification failed: Sum check mismatch."); }
-        std::cout << "  Verifier: ✅ Sum check PASSED." << std::endl;
+        std::cout << "  Verifier: Sum check PASSED." << std::endl;
 
         std::uniform_int_distribution<long long> dist(1, FieldElement::PRIME - 1);
         FieldElement challenge(dist(rng));
@@ -180,8 +180,8 @@ public:
         std::cout << "  Verifier: Received Prover's final evaluation = " << prover_final_eval << std::endl;
         std::cout << "  Verifier: My final expected value = " << expected_value << std::endl;
         bool success = (prover_final_eval == expected_value);
-        if (success) { std::cout << "  Verifier: ✅ Final check PASSED." << std::endl; }
-        else { std::cout << "  Verifier: ❌ Final check FAILED." << std::endl; }
+        if (success) { std::cout << "  Verifier: Final check PASSED." << std::endl; }
+        else { std::cout << "  Verifier: Final check FAILED." << std::endl; }
         return success;
     }
 };
@@ -231,8 +231,8 @@ int main() {
         bool success = verifier.final_check(final_prover_eval);
 
         std::cout << "\n==========================================================" << std::endl;
-        if (success) { std::cout << "✅ PROTOCOL SUCCESSFUL: Verification passed!" << std::endl; }
-        else { std::cout << "❌ PROTOCOL FAILED: Verification did not pass." << std::endl; }
+        if (success) { std::cout << "PROTOCOL SUCCESSFUL: Verification passed!" << std::endl; }
+        else { std::cout << "PROTOCOL FAILED: Verification did not pass." << std::endl; }
         std::cout << "==========================================================" << std::endl;
 
     } catch (const std::exception& e) {
@@ -242,7 +242,7 @@ int main() {
     return 0;
 }
 
-// MALICIOUS PROVER CLASS 
+/*MALICIOUS PROVER CLASS*/
 
 // class MaliciousProver : public ThalerAttentionProver {
 // public:
@@ -364,8 +364,8 @@ int main() {
 // }
 
 // int main() {
-//     
-//    
+    
+   
     
 //     // --- RUN ROBUSTNESS TESTS ---
 //     std::cout << "\n\n======================================================\n";
